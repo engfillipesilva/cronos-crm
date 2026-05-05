@@ -240,8 +240,7 @@ export function AppProvider({ children }) {
       // 2. Busca etiquetas
       const labels = await labelsService.fetchAll();
 
-      // 3. Seed órgãos do JSON se banco vazio
-      await organsService.seedFromJson(organsData);
+      // Seed organs is disabled as data is managed exclusively via DB agora
 
       // 4. Busca órgãos e quadros de órgãos
       const [organs, organBoards] = await Promise.all([
